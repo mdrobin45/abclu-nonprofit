@@ -35,21 +35,11 @@ export default function Header() {
                      className="text-gray-700 hover:text-blue-600 transition-colors">
                      Supporting Communities
                   </Link>
-                  <a
-                     href="#services"
+                  <Link
+                     href="/get-involved"
                      className="text-gray-700 hover:text-blue-600 transition-colors">
-                     Services
-                  </a>
-                  <a
-                     href="#resources"
-                     className="text-gray-700 hover:text-blue-600 transition-colors">
-                     Resources
-                  </a>
-                  <a
-                     href="#contact"
-                     className="text-gray-700 hover:text-blue-600 transition-colors">
-                     Contact
-                  </a>
+                     Get Involved
+                  </Link>
                   <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                      Get Help
                   </button>
