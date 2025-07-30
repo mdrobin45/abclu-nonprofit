@@ -22,7 +22,7 @@ export default function LandPropertyPage() {
          <Header />
 
          {/* Hero Section */}
-         <section className="relative bg-gradient-to-br from-green-50 to-blue-50 py-20">
+         <section className="relative bg-gradient-to-br from-green-50 to-blue-50 py-20 fade-in">
             <div
                className="absolute inset-0 bg-cover bg-center opacity-10"
                style={{
@@ -45,12 +45,12 @@ export default function LandPropertyPage() {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                      <a
                         href="#guides"
-                        className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-all transform hover:scale-105">
+                        className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-all transform hover:scale-105 scale-on-hover">
                         View Protection Guides
                      </a>
                      <a
                         href="#templates"
-                        className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 hover:text-white transition-all">
+                        className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 hover:text-white transition-all scale-on-hover">
                         Download Templates
                      </a>
                   </div>
@@ -59,7 +59,7 @@ export default function LandPropertyPage() {
          </section>
 
          {/* Barbuda Council Governance */}
-         <section className="py-16 bg-white">
+         <section className="py-16 bg-white slide-in-left">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                <div className="max-w-4xl mx-auto">
                   <div className="text-center mb-12">
@@ -69,7 +69,7 @@ export default function LandPropertyPage() {
                      </h2>
                   </div>
 
-                  <div className="bg-blue-50 rounded-xl p-8 mb-8">
+                  <div className="bg-blue-50 rounded-xl p-8 mb-8 card-hover">
                      <p className="text-lg text-gray-700 leading-relaxed mb-6">
                         The Barbuda Council serves as the primary governing body
                         for land matters on Barbuda, with unique authority to
@@ -78,7 +78,7 @@ export default function LandPropertyPage() {
                      </p>
 
                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="bg-white rounded-lg p-6">
+                        <div className="bg-white rounded-lg p-6 card-hover">
                            <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
                               <CheckCircle className="h-5 w-5 text-green-600" />
                               Council Authority
@@ -90,7 +90,7 @@ export default function LandPropertyPage() {
                            </p>
                         </div>
 
-                        <div className="bg-white rounded-lg p-6">
+                        <div className="bg-white rounded-lg p-6 card-hover">
                            <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
                               <Users className="h-5 w-5 text-blue-600" />
                               Community Rights
@@ -113,7 +113,7 @@ export default function LandPropertyPage() {
                   {/* Guides for Barbudans */}
                   <div
                      id="guides"
-                     className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                     className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col card-hover stagger-item">
                      <div className="bg-gradient-to-r from-green-500 to-green-600 p-6 text-white">
                         <BookOpen className="h-8 w-8 mb-3" />
                         <h3 className="text-xl font-bold mb-2">
@@ -166,14 +166,14 @@ export default function LandPropertyPage() {
                            </div>
                         </div>
 
-                        <button className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center gap-2">
+                        <button className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center gap-2 scale-on-hover">
                            Access Full Guide <ArrowRight className="h-4 w-4" />
                         </button>
                      </div>
                   </div>
 
                   {/* Family Land History */}
-                  <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col card-hover stagger-item">
                      <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-6 text-white">
                         <Camera className="h-8 w-8 mb-3" />
                         <h3 className="text-xl font-bold mb-2">
@@ -224,7 +224,7 @@ export default function LandPropertyPage() {
                            </div>
                         </div>
 
-                        <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+                        <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 scale-on-hover">
                            Start Recording <ArrowRight className="h-4 w-4" />
                         </button>
                      </div>
@@ -233,7 +233,7 @@ export default function LandPropertyPage() {
                   {/* Legal Templates */}
                   <div
                      id="templates"
-                     className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                     className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col card-hover stagger-item">
                      <div className="bg-gradient-to-r from-purple-500 to-purple-600 p-6 text-white">
                         <Download className="h-8 w-8 mb-3" />
                         <h3 className="text-xl font-bold mb-2">
@@ -247,7 +247,7 @@ export default function LandPropertyPage() {
 
                      <div className="p-6 flex-1 flex flex-col">
                         <div className="space-y-3 mb-6 flex-1">
-                           <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                           <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover-lift">
                               <div className="flex items-center gap-3">
                                  <FileText className="h-4 w-4 text-gray-600" />
                                  <span className="text-sm font-medium text-gray-600">
@@ -257,7 +257,7 @@ export default function LandPropertyPage() {
                               <Download className="h-4 w-4 text-purple-600 cursor-pointer hover:text-purple-700" />
                            </div>
 
-                           <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                           <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover-lift">
                               <div className="flex items-center gap-3">
                                  <FileText className="h-4 w-4 text-gray-600" />
                                  <span className="text-sm font-medium text-gray-600">
@@ -267,7 +267,7 @@ export default function LandPropertyPage() {
                               <Download className="h-4 w-4 text-purple-600 cursor-pointer hover:text-purple-700" />
                            </div>
 
-                           <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                           <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover-lift">
                               <div className="flex items-center gap-3">
                                  <FileText className="h-4 w-4 text-gray-600" />
                                  <span className="text-sm font-medium text-gray-600">
@@ -277,7 +277,7 @@ export default function LandPropertyPage() {
                               <Download className="h-4 w-4 text-purple-600 cursor-pointer hover:text-purple-700" />
                            </div>
 
-                           <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                           <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover-lift">
                               <div className="flex items-center gap-3">
                                  <FileText className="h-4 w-4 text-gray-600" />
                                  <span className="text-sm font-medium text-gray-600">
@@ -288,7 +288,7 @@ export default function LandPropertyPage() {
                            </div>
                         </div>
 
-                        <button className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors flex items-center justify-center gap-2">
+                        <button className="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors flex items-center justify-center gap-2 scale-on-hover">
                            View All Templates <ArrowRight className="h-4 w-4" />
                         </button>
                      </div>

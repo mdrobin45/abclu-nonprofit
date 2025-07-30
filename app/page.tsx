@@ -2,7 +2,6 @@ import {
    ArrowRight,
    Bell,
    Briefcase,
-   Handshake,
    Heart,
    HomeIcon,
    Scale,
@@ -22,7 +21,7 @@ export default function Home() {
          <BannerSlider />
 
          {/* Mission Statement */}
-         <section className="py-16 bg-white">
+         <section className="py-16 bg-white fade-in">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                <div className="text-center max-w-3xl mx-auto">
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
@@ -44,7 +43,7 @@ export default function Home() {
          {/* Key Services */}
          <section className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-               <div className="text-center mb-12">
+               <div className="text-center mb-12 fade-in">
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                      How We Help
                   </h2>
@@ -55,7 +54,7 @@ export default function Home() {
 
                <div className="grid md:grid-cols-3 gap-8">
                   {/* Land Guidance */}
-                  <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover stagger-item">
                      <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                         <HomeIcon className="h-8 w-8 text-green-600" />
                      </div>
@@ -67,13 +66,13 @@ export default function Home() {
                         and navigating complex legal processes to protect your
                         most valuable assets.
                      </p>
-                     <button className="text-green-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                     <button className="text-green-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all scale-on-hover">
                         Learn More <ArrowRight className="h-4 w-4" />
                      </button>
                   </div>
 
                   {/* Civil Rights */}
-                  <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover stagger-item">
                      <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                         <Scale className="h-8 w-8 text-blue-600" />
                      </div>
@@ -85,13 +84,13 @@ export default function Home() {
                         discrimination, ensuring equal treatment and access to
                         justice for all community members.
                      </p>
-                     <button className="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                     <button className="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all scale-on-hover">
                         Get Support <ArrowRight className="h-4 w-4" />
                      </button>
                   </div>
 
                   {/* Local Business Support */}
-                  <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover stagger-item">
                      <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                         <Briefcase className="h-8 w-8 text-orange-600" />
                      </div>
@@ -99,12 +98,12 @@ export default function Home() {
                         Local Business Support
                      </h3>
                      <p className="text-gray-600 mb-6">
-                        Resources and guidance to help local entrepreneurs
-                        navigate regulations, protect their interests, and
-                        contribute to community economic growth.
+                        Empowering local entrepreneurs with resources,
+                        networking opportunities, and advocacy to help your
+                        business thrive in our community.
                      </p>
-                     <button className="text-orange-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">
-                        Explore Resources <ArrowRight className="h-4 w-4" />
+                     <button className="text-orange-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all scale-on-hover">
+                        Grow Together <ArrowRight className="h-4 w-4" />
                      </button>
                   </div>
                </div>
@@ -167,7 +166,7 @@ export default function Home() {
          {/* Quick Navigation */}
          <section className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-               <div className="text-center mb-12">
+               <div className="text-center mb-12 fade-in">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                      Quick Access
                   </h2>
@@ -179,7 +178,7 @@ export default function Home() {
                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                   <a
                      href="#legal-aid"
-                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all">
+                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300 card-hover stagger-item">
                      <Scale className="h-8 w-8 text-blue-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                      <div className="font-semibold text-gray-900">
                         Legal Aid
@@ -188,7 +187,7 @@ export default function Home() {
 
                   <a
                      href="#resources"
-                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all">
+                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300 card-hover stagger-item">
                      <Users className="h-8 w-8 text-green-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                      <div className="font-semibold text-gray-900">
                         Resources
@@ -197,7 +196,7 @@ export default function Home() {
 
                   <a
                      href="#community"
-                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all">
+                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300 card-hover stagger-item">
                      <Heart className="h-8 w-8 text-red-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                      <div className="font-semibold text-gray-900">
                         Community
@@ -206,9 +205,9 @@ export default function Home() {
 
                   <a
                      href="#contact"
-                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all">
-                     <Handshake className="h-8 w-8 text-purple-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                     <div className="font-semibold text-gray-900">Get Help</div>
+                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300 card-hover stagger-item">
+                     <Bell className="h-8 w-8 text-purple-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                     <div className="font-semibold text-gray-900">Contact</div>
                   </a>
                </div>
             </div>
