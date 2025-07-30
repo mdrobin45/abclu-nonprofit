@@ -13,6 +13,7 @@ import {
    Shield,
    Users,
 } from "lucide-react";
+import BannerSlider from "./components/BannerSlider";
 
 export default function Home() {
    return (
@@ -57,33 +58,8 @@ export default function Home() {
             </div>
          </nav>
 
-         {/* Hero Section */}
-         <section className="relative bg-gradient-to-br from-blue-50 to-teal-50 py-20">
-            <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1630039/pexels-photo-1630039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-cover bg-center opacity-10"></div>
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-               <div className="text-center max-w-4xl mx-auto">
-                  <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                     Our Land, Our Rights, <br />
-                     <span className="text-blue-600">Our Community</span>
-                  </h1>
-                  <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                     Welcome to a resource dedicated to safeguarding the rights
-                     and interests of Barbudans, Antiguans, and all who care
-                     about these islands. Here you'll find clear information and
-                     practical tools to help protect our land, uphold our civil
-                     rights, and strengthen local communities.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                     <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105">
-                        Explore Our Services
-                     </button>
-                     <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition-all">
-                        Contact Us Today
-                     </button>
-                  </div>
-               </div>
-            </div>
-         </section>
+         {/* Banner Slider */}
+         <BannerSlider />
 
          {/* Mission Statement */}
          <section className="py-16 bg-white">
