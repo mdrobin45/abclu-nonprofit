@@ -2,91 +2,26 @@ import {
    ArrowRight,
    Bell,
    Briefcase,
-   Handshake,
    Heart,
    HomeIcon,
-   Mail,
-   MapPin,
-   Menu,
-   Phone,
    Scale,
-   Shield,
    Users,
 } from "lucide-react";
+import BannerSlider from "./components/BannerSlider";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 export default function Home() {
    return (
       <div className="min-h-screen bg-white">
-         {/* Navigation */}
-         <nav className="bg-white shadow-sm border-b border-blue-100">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-               <div className="flex justify-between items-center h-16">
-                  <div className="flex items-center space-x-3">
-                     <Shield className="h-8 w-8 text-blue-600" />
-                     <span className="text-xl font-bold text-gray-900">
-                        ABCLU
-                     </span>
-                  </div>
-                  <div className="hidden md:flex items-center space-x-8">
-                     <a
-                        href="#about"
-                        className="text-gray-700 hover:text-blue-600 transition-colors">
-                        About
-                     </a>
-                     <a
-                        href="#services"
-                        className="text-gray-700 hover:text-blue-600 transition-colors">
-                        Services
-                     </a>
-                     <a
-                        href="#resources"
-                        className="text-gray-700 hover:text-blue-600 transition-colors">
-                        Resources
-                     </a>
-                     <a
-                        href="#contact"
-                        className="text-gray-700 hover:text-blue-600 transition-colors">
-                        Contact
-                     </a>
-                     <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                        Get Help
-                     </button>
-                  </div>
-                  <Menu className="h-6 w-6 text-gray-700 md:hidden" />
-               </div>
-            </div>
-         </nav>
+         {/* Header */}
+         <Header />
 
-         {/* Hero Section */}
-         <section className="relative bg-gradient-to-br from-blue-50 to-teal-50 py-20">
-            <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/1630039/pexels-photo-1630039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-cover bg-center opacity-10"></div>
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-               <div className="text-center max-w-4xl mx-auto">
-                  <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                     Our Land, Our Rights, <br />
-                     <span className="text-blue-600">Our Community</span>
-                  </h1>
-                  <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                     Welcome to a resource dedicated to safeguarding the rights
-                     and interests of Barbudans, Antiguans, and all who care
-                     about these islands. Here you'll find clear information and
-                     practical tools to help protect our land, uphold our civil
-                     rights, and strengthen local communities.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                     <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105">
-                        Explore Our Services
-                     </button>
-                     <button className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 hover:text-white transition-all">
-                        Contact Us Today
-                     </button>
-                  </div>
-               </div>
-            </div>
-         </section>
+         {/* Banner Slider */}
+         <BannerSlider />
 
          {/* Mission Statement */}
-         <section className="py-16 bg-white">
+         <section className="py-16 bg-white fade-in">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                <div className="text-center max-w-3xl mx-auto">
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
@@ -108,7 +43,7 @@ export default function Home() {
          {/* Key Services */}
          <section className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-               <div className="text-center mb-12">
+               <div className="text-center mb-12 fade-in">
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                      How We Help
                   </h2>
@@ -119,7 +54,7 @@ export default function Home() {
 
                <div className="grid md:grid-cols-3 gap-8">
                   {/* Land Guidance */}
-                  <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover stagger-item">
                      <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                         <HomeIcon className="h-8 w-8 text-green-600" />
                      </div>
@@ -131,13 +66,13 @@ export default function Home() {
                         and navigating complex legal processes to protect your
                         most valuable assets.
                      </p>
-                     <button className="text-green-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                     <button className="text-green-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all scale-on-hover">
                         Learn More <ArrowRight className="h-4 w-4" />
                      </button>
                   </div>
 
                   {/* Civil Rights */}
-                  <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover stagger-item">
                      <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                         <Scale className="h-8 w-8 text-blue-600" />
                      </div>
@@ -149,13 +84,13 @@ export default function Home() {
                         discrimination, ensuring equal treatment and access to
                         justice for all community members.
                      </p>
-                     <button className="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                     <button className="text-blue-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all scale-on-hover">
                         Get Support <ArrowRight className="h-4 w-4" />
                      </button>
                   </div>
 
                   {/* Local Business Support */}
-                  <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 card-hover stagger-item">
                      <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
                         <Briefcase className="h-8 w-8 text-orange-600" />
                      </div>
@@ -163,12 +98,12 @@ export default function Home() {
                         Local Business Support
                      </h3>
                      <p className="text-gray-600 mb-6">
-                        Resources and guidance to help local entrepreneurs
-                        navigate regulations, protect their interests, and
-                        contribute to community economic growth.
+                        Empowering local entrepreneurs with resources,
+                        networking opportunities, and advocacy to help your
+                        business thrive in our community.
                      </p>
-                     <button className="text-orange-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all">
-                        Explore Resources <ArrowRight className="h-4 w-4" />
+                     <button className="text-orange-600 font-semibold flex items-center gap-2 hover:gap-3 transition-all scale-on-hover">
+                        Grow Together <ArrowRight className="h-4 w-4" />
                      </button>
                   </div>
                </div>
@@ -231,7 +166,7 @@ export default function Home() {
          {/* Quick Navigation */}
          <section className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-               <div className="text-center mb-12">
+               <div className="text-center mb-12 fade-in">
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                      Quick Access
                   </h2>
@@ -243,7 +178,7 @@ export default function Home() {
                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                   <a
                      href="#legal-aid"
-                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all">
+                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300 card-hover stagger-item">
                      <Scale className="h-8 w-8 text-blue-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                      <div className="font-semibold text-gray-900">
                         Legal Aid
@@ -252,7 +187,7 @@ export default function Home() {
 
                   <a
                      href="#resources"
-                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all">
+                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300 card-hover stagger-item">
                      <Users className="h-8 w-8 text-green-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                      <div className="font-semibold text-gray-900">
                         Resources
@@ -261,7 +196,7 @@ export default function Home() {
 
                   <a
                      href="#community"
-                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all">
+                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300 card-hover stagger-item">
                      <Heart className="h-8 w-8 text-red-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                      <div className="font-semibold text-gray-900">
                         Community
@@ -270,125 +205,16 @@ export default function Home() {
 
                   <a
                      href="#contact"
-                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all">
-                     <Handshake className="h-8 w-8 text-purple-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                     <div className="font-semibold text-gray-900">Get Help</div>
+                     className="group bg-white rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300 card-hover stagger-item">
+                     <Bell className="h-8 w-8 text-purple-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
+                     <div className="font-semibold text-gray-900">Contact</div>
                   </a>
                </div>
             </div>
          </section>
 
          {/* Footer */}
-         <footer className="bg-gray-900 text-white py-12">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-               <div className="grid md:grid-cols-4 gap-8">
-                  <div className="col-span-2">
-                     <div className="flex items-center space-x-3 mb-4">
-                        <Shield className="h-8 w-8 text-blue-400" />
-                        <span className="text-xl font-bold">ABCLU</span>
-                     </div>
-                     <p className="text-gray-300 mb-6">
-                        Protecting the rights and interests of Antigua and
-                        Barbuda communities through advocacy, education, and
-                        direct support.
-                     </p>
-                     <div className="space-y-2">
-                        <div className="flex items-center gap-3">
-                           <Phone className="h-4 w-4 text-blue-400" />
-                           <span className="text-gray-300">
-                              +1 (268) 123-4567
-                           </span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                           <Mail className="h-4 w-4 text-blue-400" />
-                           <span className="text-gray-300">info@abclu.org</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                           <MapPin className="h-4 w-4 text-blue-400" />
-                           <span className="text-gray-300">
-                              St. John's, Antigua and Barbuda
-                           </span>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div>
-                     <h4 className="font-semibold mb-4">Services</h4>
-                     <ul className="space-y-2 text-gray-300">
-                        <li>
-                           <a
-                              href="#"
-                              className="hover:text-white transition-colors">
-                              Land Rights
-                           </a>
-                        </li>
-                        <li>
-                           <a
-                              href="#"
-                              className="hover:text-white transition-colors">
-                              Civil Rights
-                           </a>
-                        </li>
-                        <li>
-                           <a
-                              href="#"
-                              className="hover:text-white transition-colors">
-                              Business Support
-                           </a>
-                        </li>
-                        <li>
-                           <a
-                              href="#"
-                              className="hover:text-white transition-colors">
-                              Legal Aid
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-
-                  <div>
-                     <h4 className="font-semibold mb-4">Resources</h4>
-                     <ul className="space-y-2 text-gray-300">
-                        <li>
-                           <a
-                              href="#"
-                              className="hover:text-white transition-colors">
-                              Know Your Rights
-                           </a>
-                        </li>
-                        <li>
-                           <a
-                              href="#"
-                              className="hover:text-white transition-colors">
-                              Community Updates
-                           </a>
-                        </li>
-                        <li>
-                           <a
-                              href="#"
-                              className="hover:text-white transition-colors">
-                              Legal Forms
-                           </a>
-                        </li>
-                        <li>
-                           <a
-                              href="#"
-                              className="hover:text-white transition-colors">
-                              Contact Us
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-
-               <div className="border-t border-gray-700 mt-12 pt-8 text-center">
-                  <p className="text-gray-400">
-                     © 2025 Antigua and Barbuda Civil Liberties Union. All
-                     rights reserved.
-                  </p>
-               </div>
-            </div>
-         </footer>
+         <Footer />
       </div>
    );
 }
